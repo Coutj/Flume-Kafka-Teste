@@ -46,5 +46,5 @@
 
 ## O parametro name deve ser alterado de acordo com o arquivo .properties
 ```bash
-    flume-ng agent --conf-file /opt/flume-config/flume.conf/spool-to-kafka.properties --name agent3 -Dflume.root.logger=WARN.console
+    flume-ng agent --conf-file /opt/flume-config/flume.conf/spool-to-kafka.properties --name agent3 -Dflume.root.logger=WARN,console
 ```
