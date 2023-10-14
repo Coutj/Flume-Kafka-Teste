@@ -17,6 +17,14 @@
         --bootstrap-server localhost:9092
 ```
 
+# Producer
+
+```bash
+    docker exec -it kafka /opt/bitnami/kafka/bin/kafka-console-producer.sh \
+        --broker-list localhost:9092 \
+        --topic test
+```
+
 # Consumer
 ```bash
     docker exec -it kafka /opt/bitnami/kafka/bin/kafka-console-consumer.sh \
@@ -36,6 +44,7 @@
     docker exec -it flume /bin/bash
 ```
 
+## O parametro name deve ser alterado de acordo com o arquivo .properties
 ```bash
-    flume-ng agent --conf-file /opt/flume-config/flume.conf/spool-to-kafka.properties --name agent2 -Dflume.root.logger=WARN.console
+    flume-ng agent --conf-file /opt/flume-config/flume.conf/spool-to-kafka.properties --name agent3 -Dflume.root.logger=WARN.console
 ```
